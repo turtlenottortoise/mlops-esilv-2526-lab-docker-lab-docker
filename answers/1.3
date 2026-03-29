@@ -1,0 +1,10 @@
+BACKEND_IMAGE_NAME=app-back
+CURRENT_ENVIRONMENT=dev
+
+CONTAINER_NAME=app-back
+
+docker build -t ${BACKEND_IMAGE_NAME} .
+docker run \
+    -d \
+    --name ${CONTAINER_NAME} \
+    ${BACKEND_IMAGE_NAME}

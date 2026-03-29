@@ -1,0 +1,24 @@
+services:
+  back_service:
+    image: rochdymax/lab-docker-back
+    ports:
+      - 5000
+    environment:
+      - CURRENT_ENVIRONMENT=dev
+    # volumes:
+    #   - back_logs:/app/logs
+
+  front_service:
+    image: rochdymax/lab-docker-front
+    container_name: lab-docker-front
+    ports:
+      - 8080:80
+    environment:
+      - WS_BACK_URL=https://cautious-spoon-9wrj96gr4593pxqq-5000.app.github.dev
+    # volumes:
+    #   - front_data:/usr/share/nginx/html
+
+
+# volumes:
+#   back_logs:
+#   front_data:

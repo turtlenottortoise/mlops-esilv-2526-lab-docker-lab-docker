@@ -1,0 +1,7 @@
+docker run \
+    -d \
+    -p 8080:80 \
+    -e WS_BACK_URL=https://cautious-spoon-9wrj96gr4593pxqq-5000.app.github.dev \
+#    -e TR_WS_BACK_URL=https://cautious-spoon-9wrj96gr4593pxqq-5000.app.github.dev \
+    --name lab-docker-front \
+    turtlenottortoise/lab-docker-front
