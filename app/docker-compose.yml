@@ -1,6 +1,6 @@
 services:
   back_service:
-    image: turtlenottortoise/lab-docker-back
+    image: timeserp/lab-docker-back
     ports:
       - 5000
     environment:
@@ -9,7 +9,7 @@ services:
     #   - back_logs:/app/logs
 
   front_service:
-    image: turtlenottortoise/lab-docker-front
+    image: timeserp/lab-docker-front
     container_name: lab-docker-front
     ports:
       - 8080:80
@@ -22,4 +22,5 @@ services:
 # volumes:
 #   back_logs:
 #   front_data:
+
 
